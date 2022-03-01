@@ -3,10 +3,8 @@ import styled from "styled-components";
 
 import { useApi } from "../hooks/useApi";
 export default function ProductDetails(props) {
-  const id = props.match.params.id; /*We used props.match.params.name; 
- This is given by the react-router-dom and will help us get relevant information about our navigation 
- behavior. The router will automatically match the passes prop to the name we assigned in the Route. */
- const [toRender, err, reload] = useApi("product/"+id);
+  const id = props.match.params.id;
+  const [toRender, err, reload] = useApi("product/"+id);
  //const toRender = products.filter((product) => product._id === id)[0];
  console.log("toRender",toRender) ;
  return (
